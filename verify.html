@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="auth-page">
+    <div class="auth-card">
+      <h1>Enter code</h1>
+      <p class="subtitle">
+        We sent a 6-digit code to <span id="phone-display"></span>
+      </p>
+      <div class="demo-otp-banner" id="demo-otp" aria-live="polite"></div>
+      <form id="verify-form" novalidate>
+        <div class="otp-inputs" role="group" aria-label="One-time code">
+          <input class="otp-digit" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" aria-label="Digit 1" />
+          <input class="otp-digit" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" aria-label="Digit 2" />
+          <input class="otp-digit" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" aria-label="Digit 3" />
+          <input class="otp-digit" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" aria-label="Digit 4" />
+          <input class="otp-digit" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" aria-label="Digit 5" />
+          <input class="otp-digit" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]" aria-label="Digit 6" />
+        </div>
+        <button type="submit" class="btn" id="verify-submit">Verify and continue</button>
+        <a class="btn btn-secondary btn-block" href="index.html">Use a different number</a>
+        <div class="error-msg" id="verify-error" role="alert"></div>
+      </form>
+    </div>
+    <script src="js/auth_storage.js"></script>
+    <script src="js/verify.js"></script>
+  </body>
+</html>

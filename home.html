@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-logo" href="home.html">CursorApp</a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="home.html">Home</a>
+        <a href="discover.html">Discover</a>
+        <a href="library.html">Library</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+      <div class="header-actions">
+        <span class="user-phone" id="user-phone"></span>
+        <button type="button" class="btn-logout" id="logout-btn">Log out</button>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Welcome back</p>
+        <h2 id="hero-title">Your picks, refreshed daily</h2>
+        <p>
+          Browse curated rails below, jump to Discover for more categories, or open your Library to
+          continue where you left off.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="discover.html">Explore</a>
+          <a class="btn btn-outline" href="library.html">My library</a>
+        </div>
+      </div>
+    </section>
+
+    <main class="home-main">
+      <section class="rail-section" aria-labelledby="rail-trending">
+        <div class="rail-header">
+          <h3 id="rail-trending">Trending now</h3>
+          <a href="see-all.html?rail=trending">See all</a>
+        </div>
+        <div class="rail-scroll" data-rail-mount="trending" role="list"></div>
+      </section>
+
+      <section class="rail-section" aria-labelledby="rail-continue">
+        <div class="rail-header">
+          <h3 id="rail-continue">Continue</h3>
+          <a href="see-all.html?rail=continue">See all</a>
+        </div>
+        <div class="rail-scroll" data-rail-mount="continue" role="list"></div>
+      </section>
+
+      <section class="rail-section" aria-labelledby="rail-genres">
+        <div class="rail-header">
+          <h3 id="rail-genres">Because you listen</h3>
+          <a href="see-all.html?rail=genres">See all</a>
+        </div>
+        <div class="rail-scroll" data-rail-mount="genres" role="list"></div>
+      </section>
+    </main>
+
+    <script src="js/auth_storage.js"></script>
+    <script src="js/rail_content.js"></script>
+    <script src="js/rail_render.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>
